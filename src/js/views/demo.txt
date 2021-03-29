@@ -1,0 +1,98 @@
+import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
+
+import "../../styles/demo.scss";
+
+export const Demo = props => {
+	const { store, actions } = useContext(Context);
+
+	return (
+		<div className="container-fluid">
+			<div className="jumbotron top1">
+				<div className="row">
+					<div className="col-3">
+						<img
+							src="https://cdn.pocket-lint.com/r/s/1200x/assets/images/147767-tv-feature-what-order-should-you-watch-all-the-star-wars-films-image1-1wdfjceytb.jpg"
+							className=""
+							alt="Responsive image"
+							width="290px"
+							height="230px"
+						/>
+					</div>
+					<div className="col">
+						<h1 className="display-4">Personaje: </h1>
+
+						<p style={{ textAlign: "justify" }}>
+							It is a long established fact that a reader will be distracted by the readable content of a
+							page when looking at its layout. The point of using Lorem Ipsum is that it has a
+							more-or-less normal distribution of letters, as opposed to using Content here, content here,
+							making it look like readable English. Many desktop publishing packages and web page editors
+							now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover
+							many web sites still in their infancy. Various versions have evolved over the years,
+							sometimes by accident, sometimes on purpose (injected humour and the like).
+						</p>
+					</div>
+				</div>
+				<div className="row text-justify" style={{ marginTop: "20px", borderTop: "2px solid black" }}>
+					<div className="col-2">
+						<p className="asize">
+							Name:
+							<br />
+							Prueba
+						</p>
+					</div>
+					<div className="col-2">
+						<p className="asize">
+							Birth:
+							<br />
+							Prueba
+						</p>
+					</div>
+					<div className="col-2">
+						<p className="asize">
+							Gender:
+							<br />
+							Prueba
+						</p>
+					</div>
+					<div className="col-2">
+						<p className="asize">
+							Height:
+							<br />
+							Prueba
+						</p>
+					</div>
+					<div className="col-2">
+						<p className="asize">
+							Skin Color:
+							<br />
+							Prueba
+						</p>
+					</div>
+					<div className="col-2">
+						<p className="asize">
+							Eye Color:
+							<br />
+							Prueba
+						</p>
+					</div>
+				</div>
+				<hr className="my-4" />
+
+				<Link to="/">
+					<span className="btn btn-primary btn-lg" href="#" role="button">
+						Back home
+					</span>
+				</Link>
+			</div>
+		</div>
+	);
+};
+
+Demo.propTypes = {
+	name: PropTypes.string,
+	uid: PropTypes.string,
+	url: PropTypes.string
+};
